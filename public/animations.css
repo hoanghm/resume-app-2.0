@@ -1,0 +1,68 @@
+/*Animations*/
+.fadeOnScroll {
+    opacity: 0;
+}
+
+.fadingUp {
+    animation: fadeUp 0.8s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadingLeft {
+    animation: fadeLeft 0.8s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeLeft  {
+    from {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadingRight {
+    animation: fadeRight 0.8s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeRight  {
+    from {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadingOut {
+    animation: fadeOutUp 0.8s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+

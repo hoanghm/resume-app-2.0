@@ -1,0 +1,170 @@
+.job {
+    width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+    border-radius: 10px;
+    border: 1px solid rgb(100,100,100);
+    /*border: 1px solid black;*/
+    /*overflow: hidden;*/
+}
+
+.job-title {
+    /*background-color: rgb(245, 245, 240);*/
+    background-color: rgb(50,50,50);
+    border-radius: 10px;
+    height: 120px;
+}
+
+.job-title .job-logo {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: snow;
+    border-radius: 10px 0 0 10px;
+}
+
+.job-title span {
+    /*border: 1px solid red;*/
+    position: absolute;
+    top: 28px;
+}
+
+.job-title h2 {
+    margin: 0 0 5px 10px;
+    font-size: 20px;
+    /*color: #707070;*/
+    color: rgb(200,200,200);
+}
+
+.job-title h3 {
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    color: snow;
+    font-weight: bolder;
+}
+
+.job-title:hover {
+    cursor: pointer;
+}
+
+.job-title > * {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.job-title .dropdown {
+    position: absolute;
+    width: 30px;
+    right: 50px;
+    top: 45px;
+    transition: transform 0.2s ease-out;
+}
+
+.job-description {
+    padding-left: 140px;
+    display: block;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    /*transition: height 0.3s ease-out, opacity 0.6s ease-out;*/
+}
+
+.job .expand {
+    opacity: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    visibility: visible;
+}
+
+.sub-position {
+    margin-bottom: 25px;
+    color: white;
+    /*overflow: auto;*/
+    /*border: 1px solid red;*/
+}
+
+.sub-position hr {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*width: calc(100% - 500px);*/
+}
+
+.sub-position h4 {
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(255, 166, 77);
+}
+
+.sub-position span {
+    display: inline-block;
+    /*float: right;*/
+    /*color: #707070;*/
+    color: rgb(200,200,200);
+    vertical-align: top;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.sub-position p {
+    margin-left: 20px;
+}
+
+@media(max-width: 801px) {
+    .job {
+        width: 100%;
+    }
+    .job-title {
+        height: 105px;
+    }
+    .job-title h2, .job-title h3 {
+        font-size: 15px;
+        /*display: none;*/
+    }
+    .job-title .job-logo {
+        padding: 5px;
+        width: 80px;
+        height: 80px;
+    }
+    .job-title .dropdown {
+        width: 15px;
+    }
+    .job-description {
+        padding-left: 5%;
+    }
+    .sub-position hr {
+        display: none;
+    }
+    .sub-position h4 {
+        display: block;
+        margin: 0;
+    }
+    .sub-position span {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /*border: 1px solid green;*/
+    }
+}
+
+@media(max-width: 550px) {
+    .job-title .dropdown {
+        width: 15px;
+        position: static;
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+    .job-title span {
+        top: 18px;
+    }
+    .job-title .job-logo {
+        border-radius: 100%;
+        margin: 5px 5px 0 5px;
+    }
+}

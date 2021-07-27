@@ -1,31 +1,34 @@
-#pj-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0,0,0,0.8);
+.pj-popup-container {
+    position: relative;
+    margin: auto;
+    width: 750px;
+    padding: 2.5vh 0;
+    display: block;
 }
 
 .pj-popup {
-    position: relative;
+    height: 95vh;
+    width: 100%;
     margin: auto;
-    height: 90vh;
-    width: 600px;
-    margin-top: 5vh;
     background-color: white;
     opacity: 1;
     border-radius: 10px;
     padding: 5vh;
     overflow-y: scroll;
+    display: inline-block;
 }
 
-.pj-popup i {
+.pj-popup-container .closeIcon {
     position: absolute;
-    top: 0;
-    right: 1vh;
-    text-decoration: none;
-    font-size: 25px;
+    top: 6vh;
+    width: 30px;
+    height: 30px;
+    right: -50px;
+}
+
+.pj-popup-container .closeIcon:hover {
+    cursor: pointer;
+    fill: rgb(255, 94, 31);
 }
 
 .pj-popup h2 {
@@ -41,6 +44,82 @@
     margin: auto;
 }
 
+.pj-popup .demo {
+
+}
+
 .pj-popup .description {
     margin-top: 20px;
+}
+
+
+@media (max-width: 800px) {
+    .pj-popup-container {
+        width: 90%;
+        padding-top: 10vh;
+    }
+    .pj-popup-container .closeIcon {
+        width: 20px;
+        height: 20px;
+        top: 105px;
+        right: 15px;
+    }
+    .pj-popup {
+        height: 90vh;
+        padding: 2vh;
+    }
+    .pj-popup::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+
+/*Basic stylings for project popups*/
+.large {
+    width: 100%;
+    height: auto;
+}
+
+.medium {
+    width: 80%;
+    height: auto;
+}
+
+.small {
+    width: 50%;
+    height: auto;
+}
+
+.image-form {
+    width: 100%;
+}
+
+.image-form * {
+    width: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.loading-container {
+    text-align: center;
+    display: none;
+}
+
+.result-container {
+    width: 100%;
+    display: none;
+}
+
+.result-container > * {
+    margin: 5px 0;
+}
+
+.result-container table th, .result-container table td {
+    text-align: center;
+}
+
+@media(max-width: 800px) {
+    .result-container table {
+        font-size: 12px;
+    }
 }

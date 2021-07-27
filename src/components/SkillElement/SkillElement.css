@@ -1,0 +1,75 @@
+.skill-line {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /*border: 1px solid red;*/
+    margin-bottom: 20px;
+}
+.skill-element {
+    width: 550px;
+    /*border: 1px solid green;*/
+}
+
+.skill-title {
+    /*border: 1px solid black;*/
+    overflow: auto;
+    height: auto;
+}
+
+.skill-title * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.skill-title img, .skill-title svg {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 20px 0 20px;
+}
+
+.skill-title h3 {
+    float: left;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.skill-element-description {
+    width: 420px;
+    text-align: left;
+    margin-left: 100px;
+    /*color: #707070;*/
+    color: #c1c1c1;
+}
+
+.skill-element div:last-child { /* skill description */
+
+}
+
+.skill-element hl {
+    color: rgb(255, 94, 31);
+}
+
+@media(max-width: 800px) {
+     .skill-line {
+        display: block;
+        margin-bottom: 0;
+    }
+    .skill-element {
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media(max-width: 550px) {
+    .skill-line {
+        display: block;
+        margin-bottom: 0;
+    }
+    .skill-element {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .skill-element-description {
+        width: calc(100% - 100px);
+    }
+}
