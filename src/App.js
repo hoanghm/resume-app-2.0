@@ -343,7 +343,7 @@ class App extends Component {
       message: form.message.value
     };
     //send email
-    // emailjs.sendForm("service_pkcvv1n","template_zste8j8", event.target);
+    emailjs.sendForm("service_pkcvv1n","template_zste8j8", event.target);
     console.log("email sent");
     //clear form
     form.email.value = "";
