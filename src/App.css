@@ -184,7 +184,7 @@ a:hover {
 }
 
 .pic-container div i:hover {
-    color: rgb(252, 127, 77);
+    color: #db1a57;
     transition-duration: 0.2s;
 }
 
@@ -495,7 +495,7 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: gray;
+  background: rgb(255, 94, 31);
   border-radius: 10px;
 }
 

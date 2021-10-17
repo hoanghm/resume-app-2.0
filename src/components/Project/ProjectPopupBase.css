@@ -31,7 +31,7 @@
     fill: rgb(255, 94, 31);
 }
 
-.pj-popup h2 {
+.pj-popup h1 {
     display: block;
     margin: 0 auto 30px auto;
     border: 1px solid black;
@@ -45,13 +45,16 @@
 }
 
 .pj-popup .demo {
-
+    margin-top: 50px;
 }
 
 .pj-popup .description {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
+.pj-popup::-webkit-scrollbar-thumb {
+    background: gray;
+}
 
 @media (max-width: 800px) {
     .pj-popup-container {
@@ -122,4 +125,47 @@
     .result-container table {
         font-size: 12px;
     }
+}
+
+
+.pj-popup, .pj-popup a {
+    font-size: 16px;
+}
+
+.pj-popup a {
+    color: #cf133e;
+}
+
+.pj-popup a:hover {
+    text-decoration: underline;
+}
+
+
+
+.error-container {
+    text-align: center;
+    color: red;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: beige;
+    display: none;
+}
+
+.error-container p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Server status*/
+.server-container {
+    margin: 20px 0;
+    font-size: 18px;
+}
+.good {
+    color: green;
+}
+.bad {
+    color: red;
 }

@@ -13,8 +13,9 @@
 
 .project-element h3 {
     display: inline-block;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(255, 94, 31);
     font-weight: bolder;
+    color: rgb(255, 94, 31);
 }
 
 .project-element h3:hover {
@@ -25,8 +26,9 @@
 }
 
 .project-element-description {
+    font-size: 16px;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 .project-element button {
@@ -110,3 +112,6 @@
         left: 27.5%;
     }
 }
+
+
+

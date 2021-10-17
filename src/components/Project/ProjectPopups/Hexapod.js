@@ -2,28 +2,25 @@ import React, { Component } from 'react';
 import ProjectPopupBase from "../ProjectPopupBase";
 import '../ProjectPopupBase.css';
 import hexapod_img from "../../../images/hexapod.jpg";
+import hexapod_poster from "../../../images/hexapod_poster.jpg";
 
 class Hexapod extends Component {
 
     render() {
 
-        const raw_html = `
-            <div><p>Hi, this is a test description.</p>
-            <p>In bold: <strong>something in bold</strong></p>
-            <p>In itatic: <em>something in italic</em></p>
-            <p><em>center alligned:&nbsp;</em></p>
-            <p style="text-align: center;"><em>something&nbsp; center-algined</em></p>
-            <p style="text-align: left;"><em>An image:&nbsp;</em></p>
-            <p style="text-align: left;"><em><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/God_of_War_4_cover.jpg/220px-God_of_War_4_cover.jpg" alt="" width="220" height="220" /></em></p>
-            <p style="text-align: left;"><em>a table:</em></p>
-        `;
-        console.log(raw_html);
+        const description =
+            <div>
+                <p> I completed this project in my Sophomore year of Juniata College (Fall 2018), where I obtained a B.S in Engineering Physics. </p>
+                <p> Below is a poster detailing this project, which is still hanging somewhere on the wall in the Physics Department </p>
+                <p>(Right-click and choose "<em>Open image in new tab</em>" to zoom in)</p>
+                <img src={hexapod_poster} className="large" alt="hexapod poster"/>
+            </div>;
 
         return (
             <ProjectPopupBase
                 title = "Hexapod"
                 coverImage = {hexapod_img}
-                description = {<div dangerouslySetInnerHTML={{__html: raw_html}}></div>}
+                description = {description}
             />
         );
     }

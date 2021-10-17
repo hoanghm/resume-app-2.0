@@ -17,11 +17,15 @@ class Greetings extends Component {
 
                 <div className="button-line">
                     <button>
-                        CONTACT ME
+                        <a href="#contact-anchor">
+                            CONTACT ME
+                        </a>
                     </button>
 
                     <button id="button-project">
-                        MY PROJECTS
+                        <a href="#projects-section">
+                            MY PROJECTS
+                        </a>
                     </button>
                 </div>
             </div>

@@ -10,7 +10,7 @@ class ProjectPopupBase extends Component {
             <div>
                 <div className="pj-popup-container fadingUp" id={"popup " + this.props.title}>
                     <div className="pj-popup">
-                        <h2> {this.props.title} </h2>
+                        <h1> {this.props.title} </h1>
                         <img src={this.props.coverImage} alt="project cover"/>
                         <div className="demo">
                             {this.props.demo}

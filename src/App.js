@@ -13,9 +13,14 @@ import {ReactComponent as LogoJV} from "./icons/java.svg";
 import {ReactComponent as LogoWD} from "./icons/web-dev.svg";
 import {ReactComponent as LogoEL} from "./icons/circuit.svg";
 
-import hexapod_img from './images/hexapod.jpg'
+import main_logo from './images/main-logo.png'
 import washu_logo from './icons/washu.png'
 import juniata_logo from './icons/juniata.svg'
+
+import hexapod_img from './images/hexapod.jpg'
+import facedetector_img from './images/facedetector.jpg'
+import resumeapp_img from "./images/resume-app.PNG";
+import steeringwheel_img from "./images/steeringwheel.jpg";
 
 import emailjs, {init} from 'emailjs-com'
 import {Checkmark} from 'react-checkmark'
@@ -24,6 +29,8 @@ import smoothscroll from 'smoothscroll-polyfill'
 
 import HexapodPopup from "./components/Project/ProjectPopups/Hexapod"
 import FaceDetectorPopup from "./components/Project/ProjectPopups/FaceDetector"
+import ResumeAppPopup from "./components/Project/ProjectPopups/ResumeApp"
+import SteeringWheel from "./components/Project/ProjectPopups/SteeringWheel"
 
 
 class App extends Component {
@@ -31,6 +38,7 @@ class App extends Component {
   render() {
     // let LOGO_COLOR = "#db1a57";
     let LOGO_COLOR = "rgb(255, 94, 31)";
+    let resume_link = "https://drive.google.com/file/d/1pdUiCdqH1s_wjecRcxyPD_VkFxI9EkmD/view?usp=sharing";
     return (
     <div className="App">
 
@@ -41,7 +49,7 @@ class App extends Component {
       {/*MAIN BACKGROUND*/}
       <div className="main-background">
         <div className="logo-container">
-          <a href="/"> <img src="./images/main-logo.png" className="main-logo"/> </a>
+          <a href="/"> <img src={main_logo} className="main-logo"/> </a>
         </div>
 
         <div className="nav-bar" id="window-nav-bar">
@@ -50,7 +58,7 @@ class App extends Component {
             <li><a href="#skills-section"> skills </a></li>
             <li><a href="#projects-section"> projects </a></li>
             <li><a href="#experience-section"> experience </a></li>
-            <li><a href='/' target="_blank"> resume </a></li>
+            <li><a href={resume_link} target="_blank"> resume </a></li>
             <li><a href="#contact-anchor"> contact </a></li>
           </ul>
         </div>
@@ -84,9 +92,9 @@ class App extends Component {
               <li>  My goal is to become a <strong>Machine Learning Engineer</strong>, though I am also interested in Robotics. </li>
               <li> I'm looking for an internship that focuses on the filed of Data Science/ Machine Learning next summer 2022.</li>
               <li>
-                <a href=""> <button className="sub-button"><i className="far fa-file"></i> Resume </button> </a>
-                <a href=""> <button className="sub-button"><i className="far fa-file"></i> Transcript WU </button> </a>
-                <a href=""> <button className="sub-button"><i className="far fa-file"></i> Transcript JC </button> </a>
+                <a href={resume_link} target="_blank"> <button className="sub-button"><i className="far fa-file"></i> Resume </button> </a>
+                <a href="./documents/WashUtranscript.pdf" target="_blank"> <button className="sub-button"><i className="far fa-file"></i> Transcript WU </button> </a>
+                <a href="./documents/JCtranscript.pdf" target="_blank"> <button className="sub-button"><i className="far fa-file"></i> Transcript JC </button> </a>
               </li>
             </ul>
           </div>
@@ -104,8 +112,8 @@ class App extends Component {
                 title = {"Machine Learning"}
                 description = {
                     <div>
-                        As a Data Analytics & Statistics graduate student who focuses on Machine Learning, I have strong theoretical knowledge about
-                        the ideas of Machine Learning. I also have a lot of hands-on experience in developing Machine Learning models using raw data .
+                        As a Data Analytics & Statistics graduate student who focuses on Machine Learning, I have <hl>strong theoretical knowledge</hl> about
+                        the ideas of Machine Learning. I also have a lot of hands-on experience in <hl>developing</hl> and <hl>deploying</hl> Machine Learning models.
                     </div>
                 }
                 logo = {<LogoAI fill={LOGO_COLOR}/>}
@@ -193,41 +201,29 @@ class App extends Component {
           </p>
 
           <div className="project-line">
+              <Project
+              img={steeringwheel_img}
+              title={"Steering Wheel Simulator"}
+              description={"A Steering Wheel made from cardboard that is capable of controlling any PC racing game"}
+            />
+              <Project
+              img={facedetector_img}
+              title={"Face Detector"}
+              description={"A Face Detector model that has a live API running on AWS EC2."}
+            />
+
+          </div>
+
+          <div className="project-line">
+            <Project
+              img={resumeapp_img}
+              title={"This website"}
+              description={"This portfolio website that you are viewing."}
+            />
             <Project
               img={hexapod_img}
               title={"Hexapod"}
-              description={"asdnkjasndksandks"}
-            />
-            <Project
-              img={hexapod_img}
-              title={"Face Detector"}
-              description={"asdnkjasndksandks"}
-            />
-          </div>
-
-          <div className="project-line">
-            <Project
-              img={hexapod_img}
-              title={"Testing3"}
-              description={"asdnkjasndksandks"}
-            />
-            <Project
-              img={hexapod_img}
-              title={"Testing4"}
-              description={"asdnkjasndksandks"}
-            />
-          </div>
-
-          <div className="project-line">
-            <Project
-              img={hexapod_img}
-              title={"Testing5"}
-              description={"asdnkjasndksandks"}
-            />
-            <Project
-              img={hexapod_img}
-              title={"Testing6"}
-              description={"asdnkjasndksandks"}
+              description={"A 3D-printed hexapod with 18 DOF build from scratch using RaspberryPi 3 Model B as the main control unit."}
             />
           </div>
 
@@ -305,8 +301,10 @@ class App extends Component {
       </div>
 
         <div id="pj-popup-overlay">
-          {/*<HexapodPopup/>*/}
+          <HexapodPopup/>
           <FaceDetectorPopup/>
+          <ResumeAppPopup/>
+          <SteeringWheel/>
         </div>
 
     </div>
@@ -326,22 +324,12 @@ class App extends Component {
     // window.onbeforeunload = function () {
     //   window.scrollTo(0, 0);
     // }
-    //   let pj_details = document.getElementById("popup Face Detector");
-    //   let popupOverlay = document.getElementById("pj-popup-overlay");
-    //   popupOverlay.style.display = "block";
-    //   pj_details.style.display = "block";
-    //   document.getElementsByTagName("body")[0].style.overflow = "hidden";
   }
 
   submitMessage(event) {
     let self = this;
     event.preventDefault();
     let form = document.getElementById("contact-form");
-    let params = {
-      email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value
-    };
     //send email
     emailjs.sendForm("service_pkcvv1n","template_zste8j8", event.target);
     console.log("email sent");
