@@ -6,6 +6,7 @@ import menu_bars from '../../icons/menu.png'
 class MobileNav extends Component {
 
     render() {
+        let resume_link = "https://drive.google.com/file/d/1pdUiCdqH1s_wjecRcxyPD_VkFxI9EkmD/view?usp=sharing";
 
         return (
             <div className="mobile-nav">
@@ -27,7 +28,7 @@ class MobileNav extends Component {
                         <li><a href="#skills-section"> Skills </a></li>
                         <li><a href="#projects-section"> Projects </a></li>
                         <li><a href="#experience-section"> Experience </a></li>
-                        <li><a href="" target="_blank"> Resume </a></li>
+                        <li><a href={resume_link} target="_blank"> Resume </a></li>
                         <li><a href="#contact-anchor"> Contact </a></li>
 
                     </ul>
