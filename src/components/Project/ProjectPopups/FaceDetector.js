@@ -100,6 +100,9 @@ class Hexapod extends Component {
                    serverIsUp: true
                })
            }
+        })
+        .catch(error => {
+          console.error("API is down.");
         });
     }
 
@@ -146,6 +149,9 @@ class Hexapod extends Component {
                     predictions: data.predictions
                 });
             }
+        })
+        .catch(error => {
+          console.error("Fetch error:", error);
         });
     }
 }

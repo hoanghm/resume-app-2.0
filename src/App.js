@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     // let LOGO_COLOR = "#db1a57";
     let LOGO_COLOR = "rgb(255, 94, 31)";
-    let resume_link = "https://drive.google.com/file/d/1pdUiCdqH1s_wjecRcxyPD_VkFxI9EkmD/view?usp=sharing";
+    let resume_link = "https://www.dropbox.com/scl/fi/t5f4cncuhd1tptvm8o87w/Howard_Ha.pdf?rlkey=d6f14pf69hzjqm8nm8a2lbmto&dl=0";
     return (
     <div className="App">
 
@@ -76,21 +76,16 @@ class App extends Component {
               <div>
                 <a href="https://www.facebook.com/minh.hoang.7505" target="_blank"> <i className="fab fa-facebook-square"></i> </a>
                 <a href="https://github.com/hoanghm" target="_blank"> <i className="fab fa-github-square"></i> </a>
-                <a href="https://www.linkedin.com/in/hoangha98/" target="_blank"> <i className="fab fa-linkedin"></i> </a>
+                <a href="https://www.linkedin.com/in/howardha98/" target="_blank"> <i className="fab fa-linkedin"></i> </a>
               </div>
             </div>
 
             <ul className="fadeOnScroll fadeFromRight">
               <li>
-                I received a <strong>B.S in Engineering Physics</strong> from <a href="">Juniata College</a> in May 2021 where I made Dean's List evevery semester achieved a final GPA of <strong>3.96</strong>/4.00.
+                I recently graduated from Washington University in St. Louis (May 2023) with a B.S. in Computer Science (Summa Cum Laude) and an M.S. in Data Analytics & Statistics.
               </li>
-              <li>
-                  I am pursuing a <strong>B.S in Computer Science</strong> and a <strong>M.S in Data Analytics Statistics</strong> at <a
-                  href="">Washington University in Saint Louis</a> (Current GPA: <strong>4.00</strong>/4.00). My expected graduation date is May 2023.
-              </li>
-              <li>  I have a strong background in Computer Science, Mathematics, and Physics. </li>
-              <li>  My goal is to become a <strong>Machine Learning Engineer</strong>, though I am also interested in Robotics. </li>
-              <li> I'm looking for an internship that focuses on the filed of Data Science/ Machine Learning next summer 2022.</li>
+              <li> I'm currently working as a Jr. Data Engineer at <a href="https://axiomconnected.com/" target="_blank"> Axiom Connected. </a> </li>
+              <li> My main areas of interest are Machine Learning and Data Science, although I enjoy working with data in general. </li> 
               <li>
                 <a href={resume_link} target="_blank"> <button className="sub-button"><i className="far fa-file"></i> Resume </button> </a>
                 <a href="./documents/WashUtranscript.pdf" target="_blank"> <button className="sub-button"><i className="far fa-file"></i> Transcript WU </button> </a>
@@ -244,16 +239,16 @@ class App extends Component {
             title = {"Teaching Assistant Positions"}
             sub_positions = {[
               {title: 'Analysis of Algorithms', date: 'Jan 2021 - May 2021',
-                  description:`This class introduces techniques for the mathematical analysis of algorithms, including randomized 
-                  algorithms and non-worst-case analyses such as amortized and competitive analysis. Introduces the 
+                  description:`This class introduces techniques for the mathematical analysis of algorithms, including randomized
+                  algorithms and non-worst-case analyses such as amortized and competitive analysis. Introduces the
                   standard paradigms of divide-and-conquer, greedy, and dynamic programming algorithms, as well as reductions.`},
               {title: 'Data Structures & Algorithms', date: 'Jun 2021 - Jul 2021',
-                  description:`This class is about the study of fundamental algorithms, data structures, and their effective use in a 
-                  variety of applications. Emphasizes importance of data structure choice and implementation for obtaining the 
+                  description:`This class is about the study of fundamental algorithms, data structures, and their effective use in a
+                  variety of applications. Emphasizes importance of data structure choice and implementation for obtaining the
                   most efficient algorithm for solving a given problem.`},
               {title: 'Intro to CS', date: 'Sep 2020 - Dec 2020',
-                  description:`An introduction to software concepts and implementation, emphasizing problem solving through 
-                  abstraction and decomposition. Introduces processes and algorithms, procedural abstraction, 
+                  description:`An introduction to software concepts and implementation, emphasizing problem solving through
+                  abstraction and decomposition. Introduces processes and algorithms, procedural abstraction,
                   data abstraction, encapsulation, and object-oriented programming.`}
             ]}
           />

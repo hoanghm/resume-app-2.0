@@ -10,8 +10,9 @@ class Greetings extends Component {
         return (
             <div className="main-description">
                 <div className="greetings">
-                    <h3> Hoang Ha </h3>
-                    <p> B.S Computer Science | B.S Eng Physics </p>
+                    <h3> Hoang (Howard) Ha </h3>
+                    <p> Current Position: Junior Data Engineer </p>
+                    <p> B.S Computer Science </p>
                     <p> M.S Data Analytics & Statistics </p>
                 </div>
 
